@@ -1,79 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.6/css/dataTables.dataTables.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.3.6/css/dataTables.dataTables.css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="flex gap-3 mt-6 items-center justify-center">
+      <input
+        data-name="firstname"
+        type="text"
+        class="border px-3 py-2 border-gray-300 outline-blue-300 rounded-md"
+        placeholder="enter the name"
+        name=""
+        id="name"
+      />
 
+      <input
+        data-name="order"
+        type="text"
+        class="border px-3 py-2 border-gray-300 outline-blue-300 rounded-md"
+        placeholder="enter the order"
+        name=""
+        id="order"
+      />
+      <input
+        data-name="product"
+        type="text"
+        class="border px-3 py-2 border-gray-300 outline-blue-300 rounded-md"
+        placeholder="enter the product"
+        name=""
+        id="product"
+      />
 
-        <input data-name="firstname" type="text" class="border p-2 border-black " placeholder="enter the name" name=""
-            id="name">
-
-
-
-
-        <input data-name="order" type="text" class="border p-2 border-black " placeholder="enter the order" name=""
-            id="order">
-        <input data-name="product" type="text" class="border p-2 border-black " placeholder="enter the product" name=""
-            id="product">
-
-
-
-        <div class="flex gap-3">
-
-
-
-            <div class="">
-                <input id="min" type="number" class="border p-2 border-black " placeholder="enter the Min price" name=""
-                    id="">
-            </div>
-            <div class="">
-                <input id="max" type="number" class="border p-2 border-black " placeholder="enter the Max price" name=""
-                    id="">
-            </div>
-            <button id="search">search</button>
+      <div class="flex gap-3">
+        <div class="">
+          <input
+            id="min"
+            type="number"
+            class="border px-3 py-2 border-gray-300 outline-blue-300 rounded-md"
+            placeholder="enter the Min price"
+            name=""
+            id=""
+          />
         </div>
-        <select name="" id="status">
-            <option value="" disabled selected>Status</option>
-            <option value="All">ALL</option>
-            <option value="pending">Pending</option>
-            <option value="Confirmed">Confirmed</option>
-            <option value="delivered">Delivered</option>
-        </select>
-
-
-
-
-
+        <div class="">
+          <input
+            id="max"
+            type="number"
+            class="border px-3 py-2 border-gray-300 outline-blue-300 rounded-md"
+            placeholder="enter the Max price"
+            name=""
+            id=""
+          />
+        </div>
+        <button
+          style="
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+              'Lucida Sans', Arial, sans-serif;
+          "
+          class="bg-green-400 text-white px-3 py-2 rounded-lg"
+          id="search"
+        >
+          Search
+        </button>
+        <button class="bg-red-500 text-white px-3 py-2 rounded-lg" id="clear">
+          clear
+        </button>
+      </div>
+      <select
+        class="bg-gray-100 text-black outline-gray-400 px-3 py-2 rounded-lg"
+        name=""
+        id="status"
+      >
+        <option class="" value="" disabled selected>Status</option>
+        <option value="All">ALL</option>
+        <option value="pending">Pending</option>
+        <option value="Confirmed">Confirmed</option>
+        <option value="delivered">Delivered</option>
+      </select>
     </div>
-    <table id="example" class="display">
-        <thead>
-            <tr>
-                <th></th>
-                <th>S.no</th>
-                <th>firstname</th>
-                <th>lastname</th>
-                <th>order_number</th>
-                <th>total</th>
-                <th>status</th>
-                <th>payment_status</th>
-                <th>source</th>
-                <th>customer code</th>
-                <th>Mobile No.</th>
-
-            </tr>
-        </thead>
-
+    <div class="px-10 ">
+    <table id="example" class="display border border-gray-300 rounded-xl">
+      <thead>
+        <tr>
+          <th></th>
+          <th>S.no</th>
+          <th>firstname</th>
+          <th>lastname</th>
+          <th>order_number</th>
+          <th>total</th>
+          <th>status</th>
+          <th>payment_status</th>
+          <th>source</th>
+          <th>customer code</th>
+          <th>Mobile No.</th>
+        </tr>
+      </thead>
     </table>
-</body>
-
+    </div>
+  </body>
 </html>
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script src="https://cdn.datatables.net/2.3.6/js/dataTables.js"></script>
